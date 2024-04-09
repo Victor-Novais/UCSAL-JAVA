@@ -1,16 +1,19 @@
 import java.util.Scanner;
 public class Atividade_02 {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args){
+        Scanner scan= new Scanner(System.in);
         int n;
-        double s = 0;
+        double s=0;
+
+
 
         n = scan.nextInt();
-        for (int i = 1; i <= n; i++) {
+        for( int i=1 ; i<=n; i++) {
+            int c=n;
+            if (c >= 1) {
 
-            if (n >= 1) { // Corrigido para verificar 'n' em vez de 'c'
-
-                s += (double) i / n; // Convertendo 'i' ou 'c' para double para garantir divisão decimal
+                c--;
+                s += i / c;
             }
         }
         System.out.print(s);
