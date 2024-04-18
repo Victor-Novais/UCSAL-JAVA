@@ -17,7 +17,7 @@ public class Atividade_13 {
 
     public static int calcularMMC(int num1, int num2) {
         int mmc = (num1 * num2) / calcularMDC(num1, num2);
-        return main;
+        return mmc;
     }
 
     public static int calcularMDC(int num1, int num2) {
