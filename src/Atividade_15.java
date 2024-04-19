@@ -1,6 +1,12 @@
+import java.util.Scanner;
+
 public class Atividade_15 {
     public static void main(String[] args) {
-        int n = 8;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite um numero.");
+        int n = sc.nextInt();
+
         int resultado = fibonacci(n);
         System.out.println("O " + n + "-ésimo termo da sequência de Fibonacci é: " + resultado);
     }
