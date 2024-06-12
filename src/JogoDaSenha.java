@@ -15,7 +15,7 @@ public class JogoDaSenha {
         Random rd = new Random();
         int[] senha = new int[TAMANHO_SENHA];
         for (int i = 0; i < senha.length; i++) {
-            senha[i] = rd.nextInt(6) + 1; // Gera números de 1 a 6
+            senha[i] = rd.nextInt(6) + 1;
         }
         return senha;
     }
