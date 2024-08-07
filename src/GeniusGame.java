@@ -47,7 +47,7 @@ public class GeniusGame {
             for (int number : sequence) {
                 System.out.print(number + " ");
                 try {
-                    Thread.sleep(1000); // Pausa de 1 segundo para o jogador memorizar
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }

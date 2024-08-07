@@ -10,7 +10,7 @@ public class JogoDaSenha {
         senhaSecreta = gerarSenhaAleatoria();
     }
 
-    // Gera a senha secreta aleatória de 1 a 6
+
     private int[] gerarSenhaAleatoria() {
         Random rd = new Random();
         int[] senha = new int[TAMANHO_SENHA];
@@ -20,13 +20,13 @@ public class JogoDaSenha {
         return senha;
     }
 
-    // Método para verificar a tentativa do jogador
+
     public int[] verificarTentativa(int[] tentativa) {
         int[] resultado = new int[2];
         boolean[] marcadosSenha = new boolean[TAMANHO_SENHA];
         boolean[] marcadosTentativa = new boolean[TAMANHO_SENHA];
 
-        // Verifica acertos na posição correta
+
         for (int i = 0; i < TAMANHO_SENHA; i++) {
             if (senhaSecreta[i] == tentativa[i]) {
                 resultado[0]++;
@@ -35,7 +35,7 @@ public class JogoDaSenha {
             }
         }
 
-        // Verifica acertos em posições erradas
+
         for (int i = 0; i < TAMANHO_SENHA; i++) {
             if (!marcadosTentativa[i]) {
                 for (int j = 0; j < TAMANHO_SENHA; j++) {
@@ -51,13 +51,13 @@ public class JogoDaSenha {
         return resultado;
     }
 
-    // Método para imprimir o resultado da tentativa
+
     public void imprimirResultadoTentativa(int[] resultado) {
         System.out.println("Corretos na posição correta: " + resultado[0]);
         System.out.println("Corretos em posição equivocada: " + resultado[1]);
     }
 
-    // Método para receber a tentativa do jogador
+
     public int[] receberTentativaJogador(Scanner scanner) {
         int[] tentativa = new int[TAMANHO_SENHA];
         System.out.println("Digite sua tentativa (4 números de 1 a 6, separados por espaço):");
@@ -79,7 +79,7 @@ public class JogoDaSenha {
         return tentativa;
     }
 
-    // Método para definir o número de tentativas
+
     private int definirNumeroTentativas(Scanner scanner) {
         System.out.println("Digite o número de tentativas (máximo 10):");
         int tentativas = scanner.nextInt();
@@ -91,7 +91,7 @@ public class JogoDaSenha {
         return tentativas;
     }
 
-    // Método para controlar o fluxo do jogo
+
     public void iniciarJogo() {
         Scanner scanner = new Scanner(System.in);
         int tentativasRestantes = definirNumeroTentativas(scanner);

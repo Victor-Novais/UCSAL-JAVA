@@ -1,10 +1,10 @@
-package projeto;
+
 
 import java.util.Scanner;
 
 public class JogoDaVelha {
 
-    // codigo principal
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -69,7 +69,7 @@ public class JogoDaVelha {
 
     }
 
-    // montagem do tabuleiro
+
     public static void tabuleiro(String[][] jogo) {
 
         System.out.println(" ");
@@ -82,7 +82,7 @@ public class JogoDaVelha {
 
     }
 
-    // realiza jogadas
+
     public static boolean jogadas(String[][] jogo, String jogador, int linha, int coluna) {
 
         if (jogo[linha - 1][coluna - 1].equals(" ")) {
